@@ -1,6 +1,5 @@
 <?php 
 include_once '../controllers/default_functions.php';
-session_start();
 landing_page_session_check();
 $userDetails = $_SESSION['userDetails'];
 $details = extract_user_details($userDetails);
@@ -16,8 +15,8 @@ $id = $details['id'];
 </head>
 <body>
 <div class="container">
-	<div class="header clearfix">
-		<nav>
+	<div class="header clearfix"> 
+		<nav style="margin-bottom: -11px;">
 			<ul class="nav nav-pills pull-right">
 				<li role="presentation"><a href="logout.php">Logout</a></li>
 			</ul>
@@ -30,6 +29,3 @@ $id = $details['id'];
 </div>
 </body>
 </html>
-
-
-
