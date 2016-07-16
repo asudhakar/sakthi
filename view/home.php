@@ -2,7 +2,9 @@
 include_once '../controllers/default_functions.php';
 session_start();
 landing_page_session_check();
-$id = $_SESSION['userDetails'];
+$userDetails = $_SESSION['userDetails'];
+$details = extract_user_details($userDetails);
+$id = $details['id'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +23,8 @@ $id = $_SESSION['userDetails'];
 			</ul>
 		</nav>
 		<img src="../images/logo.jpg" height="70px" width="170px">
-		<p>Total Refered:-<?php get_total_refered(); ?></p>
+		<p style="text-align:center">Total Refered :-<?php //get_total_refered($id); ?></p>
+
 	</div>
 	<hr/>
 </div>

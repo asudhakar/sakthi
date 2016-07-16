@@ -37,3 +37,9 @@
 	function log_out(){
 		session_destroy();   
 	}	
+
+	function extract_user_details($details){
+		$base64unserialized_details = base64_decode($details);
+		$unserialized_details = unserialize($base64unserialized_details);
+		return $unserialized_details;
+	}

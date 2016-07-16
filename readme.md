@@ -13,3 +13,7 @@ get_array_from_object($result) => mysqli_fetch_array($result, MYSQLI_ASSOC);
 
 db_connect() => connecting the db
 
+landing_page_session_check() => checking session in normal pages like home dashboard
+
+
+
