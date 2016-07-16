@@ -1,0 +1,39 @@
+<?php 
+	session_start();
+	function sanitize($input, $con){
+		return mysqli_real_escape_string($con, $input);
+	}
+
+	function is__array($value){
+		return is_array($value);
+	}
+
+	function emptty($value){
+		return empty($value);
+	}
+
+	function create_session($data){
+		echo "I am in";
+		$userDetails['id'] = $data;
+		$_SESSION["userDetails"] = base64_encode(serialize($userDetails));
+		if(isset($_SESSION['userDetails'])){
+			return true;
+		}
+		return false;
+	}
+
+	function landing_page_session_check(){
+		if(empty($_SESSION["userDetails"])){
+			header('location:login.php');
+		}
+	}
+
+	function login_page_session_check(){
+		if(isset($_SESSION["userDetails"])){
+			header('location:home.php');
+		}
+	}
+
+	function log_out(){
+		session_destroy();   
+	}	
