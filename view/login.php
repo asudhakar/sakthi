@@ -22,7 +22,7 @@ include_once '../controllers/default_functions.php';
 			<?php if($type == "login_error"){ echo '<p style="color:red">Invalid username or password</p>'; } ?>
 			<input type="textbox" name="username" class="form-control" placeholder="username" required autofocus><br/>
 			<input type="password" name="password" class="form-control" placeholder="password" required><br/>
-			<button type="submit" class="btn btn-success">Login</button>
+			<button type="submit" class="btn btn-success" style="width: 208px;">Login</button>
 			
 		</form>
 	</div>
