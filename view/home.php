@@ -1,6 +1,9 @@
 <?php 
 include_once '../controllers/default_functions.php';
+<<<<<<< HEAD
 include_once '../model/db.php';
+=======
+>>>>>>> 5dd0284e9651d3fb671e632efe18208e5c7be2bb
 landing_page_session_check();
 $userDetails = $_SESSION['userDetails'];
 $details = extract_user_details($userDetails);
@@ -18,9 +21,14 @@ $date = date("Y-m-d", time());
 <body>
 <br/>
 <div class="container">
+<<<<<<< HEAD
 <br/>
 	<div class="header clearfix">
 		<nav>
+=======
+	<div class="header clearfix"> 
+		<nav style="margin-bottom: -11px;">
+>>>>>>> 5dd0284e9651d3fb671e632efe18208e5c7be2bb
 			<ul class="nav nav-pills pull-right">
 				<li role="presentation"><a href="logout.php">Logout</a></li>
 			</ul>
@@ -62,6 +70,3 @@ $date = date("Y-m-d", time());
 </div>
 </body>
 </html>
-
-
-
