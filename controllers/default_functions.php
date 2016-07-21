@@ -13,7 +13,6 @@
 	}
 
 	function create_session($data){
-		echo "I am in";
 		$userDetails['id'] = $data;
 		$_SESSION["userDetails"] = base64_encode(serialize($userDetails));
 		if(isset($_SESSION['userDetails'])){
@@ -43,3 +42,4 @@
 		$unserialized_details = unserialize($base64unserialized_details);
 		return $unserialized_details;
 	}
+	

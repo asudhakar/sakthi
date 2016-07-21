@@ -11,8 +11,6 @@
 		} else{
 			return $selected_rows = "empty";
 		}
-
-		
 	}
 
 	function get_select_query($column_names, $table_name, $conditions){

@@ -22,3 +22,15 @@
 	function get_array_from_object($result){
 		return mysqli_fetch_array($result, MYSQLI_ASSOC);
 	}
+
+	function get_total_reference($id){
+		$con = db_connect();
+		$total_refered_count = select('total_refered_count', 'users', array("id"=>$id), $con);
+		return $total_refered_count['0']['total_refered_count'];
+	}
+
+	function get_name($id){
+		$con = db_connect();
+		$name = select('username', 'users', array("id"=>$id), $con);
+		return $name['0']['username'];
+	}
