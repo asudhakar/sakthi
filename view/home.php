@@ -39,7 +39,7 @@ $date = date("Y-m-d", time());
 		<input type="date" name="event_date" class="form-control" placeholder="date of surprise" value="<?php echo $date; ?>" required><br/>
 		<input type="hidden" name="refered_by" value="<?php echo $id; ?>">
 		<p style="text-align:center">
-		<button type="submit" class="btn btn-success">Earn 50 Rupees</button>
+		<button type="submit" class="btn btn-success">Earn 25 Rupees</button>
 		</p>
 	</form>
 	<h3 style="text-align:center">Total Refered :- <?php echo get_total_reference($id); ?></h3>

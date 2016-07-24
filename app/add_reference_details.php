@@ -31,7 +31,7 @@
 		$message_content = "Hi Sakthi, ".$selected_user['0']['username']." from ".$selected_user['0']['institution/company']." refered a customer. Details are :- Name :- ".$raw_input['customer_name'].", Email :- ".$raw_input['customer_email'].", Phone Number :- ".$raw_input['customer_phone_number'].", Event date is :-".$raw_input['event_date'] ;
 		echo $message_content;
 		$link = sms_db_connect();
-		$number = "9842972047";
+		$number = "9894700013";
 		$sql = "INSERT INTO `MessageOut` (`MessageFrom`, `MessageTo` , `MessageText`) VALUES ('THESIX', '$number', '$message_content')";
 		mysqli_set_charset($link, 'utf8mb4'); 
 		execute_query($sql, $link);

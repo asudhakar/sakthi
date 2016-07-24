@@ -21,6 +21,26 @@
 		return false;
 	}
 
+	function create_admin_session($data){
+		$_SESSION["adminDeatils"] = base64_encode(serialize($data));
+		if(isset($_SESSION['adminDeatils'])){
+			return true;
+		}
+		return false;
+	}
+
+	function landing_page_admin_session_check(){
+		if(empty($_SESSION["adminDeatils"])){
+			header('location:login.php');
+		}
+	}
+
+	function login_page_admin_session_check(){
+		if(isset($_SESSION["adminDeatils"])){
+			header('location:home.php');
+		}
+	}
+
 	function landing_page_session_check(){
 		if(empty($_SESSION["userDetails"])){
 			header('location:login.php');

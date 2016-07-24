@@ -4,9 +4,9 @@
 	include_once '../model/db.php';
 	
 	$con = db_connect();
-	$username = sanitize($_POST['username'], $con);
+	$email = sanitize($_POST['email'], $con);
 	$password = sanitize($_POST['password'], $con);
-	$id = get_id($username, $password, $con);
+	$id = get_id($email, $password, $con);
 	if(!emptty($id)){
 		create_session($id);
 		header('Location: ../view/home.php');
@@ -14,8 +14,8 @@
 		header('Location: ../view/login.php?type=login_error');
 	}
 
-	function get_id($username, $password, $con){
-		$selected_row = select('id', 'users', array("username"=>$username, "password"=>$password), $con);
+	function get_id($email, $password, $con){
+		$selected_row = select('id', 'users', array("email"=>$email, "password"=>$password), $con);
 		return $selected_row[0]['id'];
 	}
 
