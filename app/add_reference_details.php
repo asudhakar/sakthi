@@ -32,14 +32,14 @@
 		echo $message_content;
 		$link = sms_db_connect();
 		$number = "9894700013";
-		$sql = "INSERT INTO `MessageOut` (`MessageFrom`, `MessageTo` , `MessageText`) VALUES ('THESIX', '$number', '$message_content')";
+		$sql = "INSERT INTO `MessageOut` (`MessageTo` , `MessageText`) VALUES ($number', '$message_content')";
 		mysqli_set_charset($link, 'utf8mb4'); 
 		execute_query($sql, $link);
 		
 	}
 
 	function sms_db_connect(){
-		$connection = mysqli_connect('192.168.1.201', "demo", "demo1234", "demo", 3306);
+		$connection = mysqli_connect('192.168.1.201', "thesix", "thesix1234", "thesix", 3306);
 		if (!$connection) {
 		    die("Connection failed: " . mysqli_connect_error());
 		    exit();
