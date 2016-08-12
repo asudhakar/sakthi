@@ -39,7 +39,7 @@
 	}
 
 	function sms_db_connect(){
-		$connection = mysqli_connect('192.168.1.201', "thesix", "thesix1234", "thesix", 3306);
+		$connection = mysqli_connect('vefetch.cloudapp.net', "thesix", "thesix1234", "thesix", 3306);
 		if (!$connection) {
 		    die("Connection failed: " . mysqli_connect_error());
 		    exit();
