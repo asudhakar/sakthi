@@ -1,3 +1,10 @@
+<?php 
+  include_once '../../controllers/default_functions.php';
+  include_once '../../model/db.php';
+  landing_page_admin_session_check();
+  $userDetails = $_SESSION['adminDeatils'];
+  $details = extract_user_details($userDetails);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +21,7 @@
 <div class="wrapper">
   <!-- header -->
   <header class="main-header">
-    <a href="index.html" class="logo">
+    <a href="index.php" class="logo">
       <span class="logo-mini"><b>the6</b></span>
       <span class="logo-lg"><b>the6</b>.in</span>
     </a>
@@ -27,18 +34,18 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="../img/avatar5.png" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs"><?php echo $details['name']; ?></span>
             </a>
             <ul class="dropdown-menu">
               <li class="user-header">
                 <img src="../img/avatar5.png" class="img-circle" alt="User Image">
                 <p>
-                  Alexander Pierce
+                  <?php echo $details['name']; ?>
                 </p>
               </li>
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -51,28 +58,13 @@
   <aside class="main-sidebar">
       <section class="sidebar">
         <ul class="sidebar-menu">
-          <li><a href="#"><i class="fa fa-circle-o text-red "></i> <span>Dashboard</span></a></li>
-          <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Add User</span></a></li>
-          <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Manage User</span></a></li>
-          <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Add Catagory</span></a></li>
-          
+          <li><a href="home.php"><i class="fa fa-circle-o text-red "></i> <span>Dashboard</span></a></li>
+          <li><a href="add_user.php"><i class="fa fa-circle-o text-yellow"></i> <span>Add User</span></a></li>
+          <li><a href="manage_user.php"><i class="fa fa-circle-o text-red"></i> <span>Manage User</span></a></li>
+          <li><a href="add_catagory.php"><i class="fa fa-circle-o text-aqua"></i> <span>Add Catagory</span></a></li>
         </ul>
       </section>
   </aside>
   <!-- Content -->
   <div class="content-wrapper">
     <section class="content">
-        <p>Develoepr eruma inga content paste pannu da</p>
-    </section>
-  </div>
-  <!-- footer -->
-  <footer class="main-footer">
-   <strong>Copyright &copy; 2014-2016 <a href="http://vefetch.com">Vefetch</a>.</strong> All rights
-    reserved.
-  </footer>
-</div>
-<script src="../js/jquery-2.2.3.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/app.min.js"></script>
-</body>
-</html>
