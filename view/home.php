@@ -44,7 +44,11 @@ $date = date("Y-m-d", time());
 	</form>
 	<h3 style="text-align:center">Total Refered :- <?php echo get_total_reference($id); ?></h3>
 	<?php
-			$status = $_GET['status'];
+			if(isset($_GET['status'])){
+				$status = $_GET['status'];
+			}else{
+				$status = "";
+			}
 			switch ($status) {
 				case 'updated':
 					echo '<div class="alert alert-success"><strong>Success!</strong> Added successfully.</div>';

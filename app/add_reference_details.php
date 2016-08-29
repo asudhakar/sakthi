@@ -5,7 +5,8 @@
 	update_reference_list($_POST, $con);
 
 	function update_reference_list($raw_input, $con){
-		insert('reference_list', array('customer_name', 'customer_phone_number', 'customer_email', 'event_date', 'refered_by' ), $raw_input, $con);
+		$raw_input['refered_date'] = date("Y-m-d h:i:sa");
+		insert('reference_list', array('customer_name', 'customer_phone_number', 'customer_email', 'event_date', 'refered_by', 'refered_date' ), $raw_input, $con);
 		$userDetails = $_SESSION["userDetails"];
 		$details = extract_user_details($userDetails);
 		$id = $details['id'];
@@ -16,7 +17,7 @@
 		if(execute_query($sql, $con)){
 			
 
-			send_message_to_sakthi($id,$raw_input, $con);
+			// send_message_to_sakthi($id,$raw_input, $con);
 
 
 			header('location: ../view/home.php?status=updated');

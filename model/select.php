@@ -7,6 +7,9 @@
 			while($row = get_array_from_object($result)) {
 				$selected_rows[] = $row;
 			}
+			if(empty($selected_rows)){
+				$selected_rows = "empty";
+			}
 			return $selected_rows;
 		} else{
 			return $selected_rows = "empty";
