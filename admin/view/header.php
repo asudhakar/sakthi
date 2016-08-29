@@ -33,14 +33,14 @@
         <ul class="nav navbar-nav">
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../img/avatar5.png" class="user-image" alt="User Image">
+              <img src="../img/pp.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs"><?php echo $details['name']; ?></span>
             </a>
             <ul class="dropdown-menu">
               <li class="user-header">
-                <img src="../img/avatar5.png" class="img-circle" alt="User Image">
+                <img src="../img/pp.jpg" class="img-circle" alt="User Image">
                 <p>
-                  <?php echo $details['name']; ?>
+                  Bye <?php echo $details['name']; ?>
                 </p>
               </li>
               <li class="user-footer">
