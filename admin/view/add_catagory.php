@@ -1,7 +1,11 @@
 <?php include_once 'header.php'; ?>
 <div class="home_header">
-	<h1>Today's Referals</h1>
-	<hr style="border-top: 1px solid #191616">
+	<h1>Add Catagory</h1>
+	<br>
+	<form method="post" action="../app/add_catagory.php">
+    	<input type="textbox" name="catagory_name" class="form-control" placeholder="Catogory Name" required autofocus><br/>
+    </form>
+    <hr style="border-top: 1px solid #191616">
 </div>
 <div class="home_content">
 	 <table class="table table-hover">
