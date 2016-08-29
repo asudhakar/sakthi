@@ -15,8 +15,8 @@
   <!-- header -->
   <header class="main-header">
     <a href="index.html" class="logo">
-      <span class="logo-mini"><b>Template</b>Small</span>
-      <span class="logo-lg"><b>template</b>small</span>
+      <span class="logo-mini"><b>the6</b></span>
+      <span class="logo-lg"><b>the6</b>.in</span>
     </a>
     <nav class="navbar navbar-static-top">
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
@@ -51,9 +51,11 @@
   <aside class="main-sidebar">
       <section class="sidebar">
         <ul class="sidebar-menu">
-          <li><a href="#"><i class="fa fa-circle-o text-red "></i> <span>Important</span></a></li>
-          <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-          <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+          <li><a href="#"><i class="fa fa-circle-o text-red "></i> <span>Dashboard</span></a></li>
+          <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Add User</span></a></li>
+          <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Manage User</span></a></li>
+          <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Add Catagory</span></a></li>
+          
         </ul>
       </section>
   </aside>
