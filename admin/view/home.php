@@ -30,7 +30,11 @@ $details = extract_user_details($userDetails);
 		<hr/>
 		<h2 style="text-align: center;">Add User</h2>
 		<?php
-			$status = $_GET['status'];
+			if(isset($_GET['status'])){
+				$status = $_GET['status'];
+			}else{
+				$status = "";
+			}
 			switch ($status) {
 				case 'inserted':
 					echo '<div class="alert alert-success"><strong>Success!</strong> New user added successfully.</div>';

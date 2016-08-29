@@ -1,6 +1,10 @@
 <?php 
 	include_once '../../controllers/default_functions.php';
-	$type = $_GET['type'];
+	if(isset($_GET['type'])){
+		$type = $_GET['type'];
+	}else{
+		$type = "";
+	}
 	login_page_admin_session_check();
  ?>
 <!DOCTYPE html>
