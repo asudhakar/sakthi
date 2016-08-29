@@ -21,7 +21,7 @@
 <div class="wrapper">
   <!-- header -->
   <header class="main-header">
-    <a href="index.php" class="logo">
+    <a href="home.php" class="logo">
       <span class="logo-mini"><b>the6</b></span>
       <span class="logo-lg"><b>the6</b>.in</span>
     </a>
