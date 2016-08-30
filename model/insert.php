@@ -2,7 +2,6 @@
 	
 	function insert($table_name, $column_names, $column_values, $con){
 		$sql = get_insert_query($table_name, $column_names, $column_values);
-		echo $sql;
 		if(execute_query($sql, $con) == 1){
 			return "inserted";
 		}else{
