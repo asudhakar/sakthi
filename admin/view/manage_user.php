@@ -26,7 +26,7 @@
     <?php
     $html_content = "";
     foreach ($total_user_details as $key => $user_details) {
-      $html_content = $html_content."<tr><td>".$user_details['username']."</td><td>".$user_details['email']."</td><td>".$user_details['catagory']."</td><td>".$user_details['institution/company']."</td><td>".$user_details['total_refered_count']."</td><td><a href='../app/option.php?id=".$user_details['id']."&option=edit'>Edit</a> <a href='../app/option.php?id=".$user_details['id']."&option=delete'>Delete</a></tr>";
+      $html_content = $html_content."<tr><td><a href='user_referals.php?id=".$user_details['id']."'>".$user_details['username']."</a></td><td>".$user_details['email']."</td><td>".$user_details['catagory']."</td><td>".$user_details['institution/company']."</td><td>".$user_details['total_refered_count']."</td><td><a href='../app/option.php?id=".$user_details['id']."&option=edit'>Edit</a> <a href='../app/option.php?id=".$user_details['id']."&option=delete'>Delete</a></tr>";
     }
     echo $html_content;
     ?>
