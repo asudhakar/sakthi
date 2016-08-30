@@ -7,7 +7,7 @@
 <?php
   include_once '../app/home.php';
   $todays_referals = get_todays_referals();
-  if(!empty($todays_referals)){
+  if($todays_referals != "empty"){
 ?>
   <table class="table table-hover">
     <thead>
@@ -36,11 +36,6 @@
     echo "No data found on today";
   }
 ?>
-	 
-
-    
-
-
 </div>
 
 <?php include_once 'footer.php'; ?>

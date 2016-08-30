@@ -4,123 +4,43 @@
 	<hr style="border-top: 1px solid #191616">
 </div>
 <div class="home_content">
-	 <table class="table table-hover">
+  
+<?php
+  include_once '../app/manage_user.php';
+  $total_user_details = get_total_user_details();
+  if($total_user_details != "empty"){
+?>
+
+<table class="table table-hover">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
+        <th>Name</th>
         <th>Email</th>
+        <th>Catagory</th>
+        <th>Company Name</th>
+        <th>Total Refered Count</th>
+        <th>Options</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+    <?php
+    $html_content = "";
+    foreach ($total_user_details as $key => $user_details) {
+      $html_content = $html_content."<tr><td>".$user_details['username']."</td><td>".$user_details['email']."</td><td>".$user_details['catagory']."</td><td>".$user_details['institution/company']."</td><td>".$user_details['total_refered_count']."</td><td><a href='../app/option.php?id=".$user_details['id']."&option=edit'>Edit</a> <a href='../app/option.php?id=".$user_details['id']."&option=delete'>Delete</a></tr>";
+    }
+    echo $html_content;
+    ?>
+
     </tbody>
   </table>
 
+    
+
+<?php
+  }else{
+    echo '<h3>No user record found yet wanted to <a href="add_user.php">add</a>?</h3>';
+  }
+?>
 
 </div>
 
