@@ -45,7 +45,7 @@
     <?php
     $html_content = "";
     foreach ( $total_catagories as $key => $total_catagory) {
-      $html_content = $html_content."<tr><td>".++$key."</td><td>".$total_catagory['catagory_name']."</td><td><a href='../app/option.php?id=".$total_catagory['id']."&option=edit'>Edit</a> <a href='../app/option.php?id=".$total_catagory['id']."&option=delete'>Delete</a></tr>";
+      $html_content = $html_content."<tr><td>".++$key."</td><td>".$total_catagory['catagory_name']."</td><td><a href='../app/edit_catagory.php?id=".$total_catagory['id']."'>Edit</a> <a href='../app/delete_catagory.php?id=".$total_catagory['id']."'>Delete</a></tr>";
     }
     echo $html_content;
     ?>
