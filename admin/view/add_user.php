@@ -3,7 +3,10 @@
         <?php
           if(isset($_GET['status'])){
             $status = $_GET['status'];
-          }else{
+          }else if($_GET['id']){
+            $id = $_GET['id']
+          }
+          else{
             $status = "";
           }
           switch ($status) {
