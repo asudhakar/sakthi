@@ -31,7 +31,6 @@
 <?php
   include_once '../controllers/add_catagory_controller.php';
   $total_catagories = get_total_catagory();
-  print_r($total_catagories);
   if($total_catagories != "empty"){
 ?>
 	<table class="table table-hover">
