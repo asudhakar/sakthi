@@ -15,11 +15,7 @@
 
 		$sql = 'UPDATE `users` SET `total_refered_count` = "'.$update_refer.'" WHERE id = "'.$id.'"';
 		if(execute_query($sql, $con)){
-			
-
 			// send_message_to_sakthi($id,$raw_input, $con);
-
-
 			header('location: ../view/home.php?status=updated');
 		}else{
 			header('location: ../view/home.php?status=error');
