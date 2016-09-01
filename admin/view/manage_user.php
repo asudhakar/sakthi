@@ -24,7 +24,7 @@
     <?php
     $html_content = "";
     foreach ($total_user_details as $key => $user_details) {
-      $html_content = $html_content."<tr><td><a href='user_referals.php?id=".$user_details['id']."'>".$user_details['username']."</a></td><td>".$user_details['email']."</td><td>".$user_details['catagory']."</td><td>".$user_details['institution/company']."</td><td>".$user_details['total_refered_count']."</td><td><a href='../app/add_user.php?id=".$user_details['id']."'>Edit</a> <a href='../app/delete_user.php?id=".$user_details['id']."'>Delete</a></tr>";
+      $html_content = $html_content."<tr><td><a href='user_referals.php?id=".$user_details['id']."'>".$user_details['username']."</a></td><td>".$user_details['email']."</td><td>".$user_details['catagory']."</td><td>".$user_details['institution/company']."</td><td>".$user_details['total_refered_count']."</td><td><a href='../view/edit_user.php?id=".$user_details['id']."'>Edit</a> <a href='../app/delete_user.php?id=".$user_details['id']."'>Delete</a></tr>";
     }
     echo $html_content;
     ?>

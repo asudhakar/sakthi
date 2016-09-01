@@ -35,7 +35,7 @@ $date = date("Y-m-d", time());
 	<form action="../app/add_reference_details.php" method="post">
 		<input type="textbox" name="customer_name" class="form-control" placeholder="customer name" required autofocus><br/>
 		<input type="number" name="customer_phone_number" class="form-control" placeholder="customer phone number" required><br/>
-		<input type="email" name="customer_email" class="form-control" placeholder="customer email" required><br/>
+		<input type="email" name="customer_email" class="form-control" placeholder="customer email" ><br/>
 		<input type="date" name="event_date" class="form-control" placeholder="date of surprise" value="<?php echo $date; ?>" required><br/>
 		<input type="hidden" name="refered_by" value="<?php echo $id; ?>">
 		<p style="text-align:center">

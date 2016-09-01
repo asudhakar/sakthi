@@ -23,7 +23,13 @@
     <?php
     $html_content = "";
     foreach ($todays_referals as $key => $todays_referal) {
-      $html_content = $html_content."<tr><td>".$todays_referal['customer_name']."</td><td>".$todays_referal['customer_phone_number']."</td><td>".$todays_referal['customer_email']."</td><td>".$todays_referal['event_date']."</td><td><a href='user_referals.php?id=".$todays_referal['refered_by']."'>".get_user_name($todays_referal['refered_by'])."</a></td></tr>";
+      if(empty($todays_referal['customer_email']))
+      {
+        $email = "no email given";
+      }else{
+        $email = $todays_referal['customer_email'];
+      }
+      $html_content = $html_content."<tr><td>".$todays_referal['customer_name']."</td><td>".$todays_referal['customer_phone_number']."</td><td>".$email."</td><td>".$todays_referal['event_date']."</td><td><a href='user_referals.php?id=".$todays_referal['refered_by']."'>".get_user_name($todays_referal['refered_by'])."</a></td></tr>";
     }
     echo $html_content;
     ?>
