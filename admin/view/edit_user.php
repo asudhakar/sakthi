@@ -13,6 +13,7 @@
         ?>
         <div>
           <form method="post" action="../app/edit_user.php">
+            <input type="hidden" name="id" value="<?php echo $user_details[0]['id']; ?> ">
             <input type="textbox" name="username" class="form-control" placeholder="user name" value = "<?php echo $user_details[0]['username']; ?>" required autofocus><br/>
             <input type="email" name="email" class="form-control" placeholder="email" value = "<?php echo $user_details[0]['email']; ?>" required autofocus><br/>
             <input type="password" name="password" class="form-control" placeholder="password" value = "<?php echo $user_details[0]['password']; ?>" required><br/>
