@@ -3,7 +3,7 @@
 	include_once 'curd_operations.php';
 
 	function db_connect(){
-		$connection = mysqli_connect("localhost", "root", "", "sakthi");
+		$connection = mysqli_connect("localhost", "root", "palaniM@67", "sakthi_staging");
 		if (!$connection) {
 		    die("Connection failed: " . mysqli_connect_error());
 		    exit();
