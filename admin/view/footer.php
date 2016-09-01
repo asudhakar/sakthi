@@ -6,7 +6,6 @@
     reserved.
   </footer>
 </div>
-<script src="../js/jquery-2.2.3.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/app.min.js"></script>
 </body>
