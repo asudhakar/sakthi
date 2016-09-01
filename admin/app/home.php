@@ -12,5 +12,9 @@
 	function get_user_name($id){
 		$con = db_connect();
 		$username = select('username', 'users',"id = '$id'", $con);
-		return $username[0]['username'];
+		if($username == "empty"){
+			return "something went wrong";
+		}else{
+			return $username[0]['username'];
+		}
 	}
