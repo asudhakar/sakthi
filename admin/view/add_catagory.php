@@ -52,7 +52,9 @@
 
     </tbody>
   </table>
-  <?php }
+  <?php }else{
+    echo "please add some catagory";
+  }
   ?>
 
 </div>
