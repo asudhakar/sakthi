@@ -25,7 +25,12 @@
 <?php
     $html_content = "";
     foreach ($referal_details as $key => $referal_detail) {
-      $html_content = $html_content."<tr><td>".$referal_detail['customer_name']."</td><td>".$referal_detail['customer_phone_number']."</td><td>".$referal_detail['customer_email']."</td><td>".$referal_detail['event_date']."</td><td>".$referal_detail['refered_date']."</td></tr>";
+    	if(empty($referal_detail['customer_email'])){
+    		$email = "No email given!";
+    	}else{
+    		$email = $referal_detail['customer_email'];
+    	}
+      $html_content = $html_content."<tr><td>".$referal_detail['customer_name']."</td><td>".$referal_detail['customer_phone_number']."</td><td>".$email."</td><td>".$referal_detail['event_date']."</td><td>".$referal_detail['refered_date']."</td></tr>";
     }
     echo $html_content;
     ?>
