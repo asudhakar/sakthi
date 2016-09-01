@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/AdminLTE.min.css">
   <link rel="stylesheet" href="../css/_all-skins.min.css">
+<script src="../js/jquery-2.2.3.min.js"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -74,6 +75,7 @@
                           echo count(get_event_details()); 
                         }
               ?></span></span></a></li>
+          <li><a href="events.php"><i class="fa fa-circle-o text-aqua"></i> <span>Events <span class="label label-warning"><?php if(get_event_details() != "empty"){echo count(get_event_details());}else{echo 0;} ?></span></span></a></li>
         </ul>
       </section>
   </aside>
