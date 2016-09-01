@@ -1,6 +1,7 @@
 <?php 
   include_once '../../controllers/default_functions.php';
   include_once '../../model/db.php';
+  include_once '../app/event.php';
   landing_page_admin_session_check();
   $userDetails = $_SESSION['adminDeatils'];
   $details = extract_user_details($userDetails);
@@ -65,6 +66,7 @@
           <li><a href="manage_user.php"><i class="fa fa-circle-o text-red"></i> <span>Manage User</span></a></li>
           <li><a href="add_catagory.php"><i class="fa fa-circle-o text-aqua"></i> <span>Add Catagory</span></a></li>
           <li><a href="report.php"><i class="fa fa-circle-o text-yellow"></i> <span>Report</span></a></li>
+          <li><a href="events.php"><i class="fa fa-circle-o text-aqua"></i> <span>Events <span class="label label-warning"><?php echo count(get_event_details()); ?></span></span></a></li>
         </ul>
       </section>
   </aside>
