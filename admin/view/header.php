@@ -62,6 +62,7 @@
           <li><a href="add_user.php"><i class="fa fa-circle-o text-yellow"></i> <span>Add User</span></a></li>
           <li><a href="manage_user.php"><i class="fa fa-circle-o text-red"></i> <span>Manage User</span></a></li>
           <li><a href="add_catagory.php"><i class="fa fa-circle-o text-aqua"></i> <span>Add Catagory</span></a></li>
+          <li><a href="report.php"><i class="fa fa-circle-o text-yellow"></i> <span>Report</span></a></li>
         </ul>
       </section>
   </aside>
