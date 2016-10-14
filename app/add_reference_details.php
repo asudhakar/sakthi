@@ -50,7 +50,7 @@
 		$headers  = 'From: [your_gmail_account_username]@gmail.com' . "\r\n" .
 		            'MIME-Version: 1.0' . "\r\n" .
 		            'Content-type: text/html; charset=utf-8';
-		if(mail('sakthi@the6.in', $subject , $message_content , $headers))
+		if(mail('asudhakar@live.in', $subject , $message_content , $headers))
 			    echo "Email sent";
 			else
 			    echo "Email sending failed";
